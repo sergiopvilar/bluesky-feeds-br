@@ -1,6 +1,8 @@
 require_relative 'feed'
+require 'pry'
+require 'json'
 
-class StarWarsFeed < Feed
+class PortugueseFeed < Feed
   REGEXPS = [
     /star ?wars/i, /mandalorian/i, /\bandor\b/i, /boba fett/i, /obi[ \-]?wan/i, /\bahsoka\b/, /\bjedi\b/i,
     /\bsith\b/i, /\byoda\b/i, /Empire Strikes Back/, /chewbacca/i, /Han Solo/, /darth vader/i, /skywalker/i,
@@ -12,18 +14,21 @@ class StarWarsFeed < Feed
   end
 
   def display_name
-    "Star Wars"
+    "Português"
   end
 
   def description
-    "Feed with posts about Star Wars"
+    "Feed com posts em Português"
   end
 
   def avatar_file
-    "images/babyyoda.jpg"
+    "images/brasil.png"
   end
 
   def post_matches?(post)
-    REGEXPS.any? { |r| post.text =~ r }
+    langs = JSON.parse(post.data)["langs"]
+    return false if langs.nil?
+
+    langs.include?("pt")
   end
 end

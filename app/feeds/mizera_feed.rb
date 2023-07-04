@@ -1,8 +1,8 @@
 require_relative 'feed'
 
-class LinuxFeed < Feed
+class MizeraFeed < Feed
   REGEXPS = [
-    /linux/i, /debian/i, /ubuntu/i, /\bKDE\b/, /\bGTK\d?\b/
+    /mizera/i, /mzr/i
   ]
 
   def feed_id
@@ -10,15 +10,15 @@ class LinuxFeed < Feed
   end
 
   def display_name
-    "Linux"
+    "Mizera"
   end
 
   def description
-    "Feed with posts about Linux"
+    "Todos posts contendo a palavra 'Mizera'"
   end
 
   def avatar_file
-    "images/linux_tux.png"
+    "images/mizera.jpg"
   end
 
   def post_matches?(post)

@@ -11,4 +11,5 @@ gem 'rake'
 group :development do
   gem 'webrick'
   gem 'capistrano', '~> 2.0'
+  gem 'pry', '~> 0.13.1'
 end

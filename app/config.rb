@@ -5,11 +5,11 @@ require 'sinatra/activerecord'
 
 ActiveRecord::Base.connection.execute "PRAGMA journal_mode = WAL"
 
-BlueFactory.set :publisher_did, 'did:plc:<your_identifier_here>'
+BlueFactory.set :publisher_did, 'did:plc:sergiopvilar'
 BlueFactory.set :hostname, 'feeds.example.com'
 
-BlueFactory.add_feed 'linux', LinuxFeed.new
-BlueFactory.add_feed 'starwars', StarWarsFeed.new
+BlueFactory.add_feed 'mizera', MizeraFeed.new
+BlueFactory.add_feed 'portuguese', PortugueseFeed.new
 
 # do any additional config & customization on BlueFactory::Server here:
 #
