@@ -1,5 +1,4 @@
 require_relative 'feed'
-require 'pry'
 require 'json'
 
 class PortugueseFeed < Feed
