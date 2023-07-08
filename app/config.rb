@@ -10,6 +10,7 @@ BlueFactory.set :hostname, 'albatross.bluesky-feeds-br-2.c66.me'
 
 BlueFactory.add_feed 'mizera', MizeraFeed.new
 BlueFactory.add_feed 'portuguese', PortugueseFeed.new
+BlueFactory.add_feed 'vinyl', VinylFeed.new
 
 # do any additional config & customization on BlueFactory::Server here:
 #
