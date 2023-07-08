@@ -25,8 +25,10 @@ class PortugueseFeed < Feed
   end
 
   def post_matches?(post)
-    langs = JSON.parse(post.data)["langs"]
+    data = JSON.parse(post.data)
+    langs = data["langs"]
     return false if langs.nil?
+    return false if !data["reply"].nil?
 
     langs.include?("pt")
   end

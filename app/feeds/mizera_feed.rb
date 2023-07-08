@@ -2,7 +2,7 @@ require_relative 'feed'
 
 class MizeraFeed < Feed
   REGEXPS = [
-    /mizera/i, /mzr/i
+    /mizera/i
   ]
 
   def feed_id
