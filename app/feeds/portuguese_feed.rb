@@ -27,6 +27,7 @@ class PortugueseFeed < Feed
   def post_matches?(post)
     data = JSON.parse(post.data)
     langs = data["langs"]
+    return true if post.repo == "did:plc:yt5efykszuf2r7r37m2sxcbt"
     return false if langs.nil?
     return false if !data["reply"].nil?
 
