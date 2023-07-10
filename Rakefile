@@ -50,6 +50,17 @@ task :destroy_posts do
   print "Feed Post total: #{postfeed_total}"
 end
 
+desc "Posts total"
+task :post_total do
+  post_total = Post.count
+  postfeed_total = FeedPost.count
+
+  print "Posts total: #{post_total}"
+  print "\n"
+  print "Feed Post total: #{postfeed_total}"
+end
+
+
 desc "Rescan all posts and rebuild the feed from scratch"
 task :rebuild_feed do
   feed = get_feed
