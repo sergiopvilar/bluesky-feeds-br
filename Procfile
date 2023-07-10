@@ -1,1 +1,1 @@
-worker: ruby firehose.rb
+worker: ruby firehose.rb -lm
